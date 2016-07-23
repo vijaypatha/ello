@@ -1,0 +1,189 @@
+html {
+  background: url('https://images.unsplash.com/photo-1431148648147-67151485ab42?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=26458747f1853732eaf598b70d0aeef1') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  background: transparent;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+h1{
+text-align: center;
+letter-spacing: 15px;
+color: white;
+}
+
+h3 {
+  margin-top: 0;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+  .row {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: wrap;
+
+  }
+
+  .list {
+    border: 1px solid #5d5d5d;
+    background-color: #fff;
+    border-radius: 2px;
+    width: 1000px;
+    margin: 10px 10px;
+    padding: 60px;
+    box-shadow: -6px 10px 6px -6px ;
+  }
+
+
+  .card {
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #5d5d5d;
+    border-radius: 2px;
+    cursor: -webkit-grab;
+  }
+
+    .card:hover {
+      background-color: #eee;
+    }
+.glyphicon{
+  color:white;
+  float: right;
+  padding-right: 80px;
+  font-size: 2em;
+}
+.intro{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  align-items: center;
+}
+
+.input{
+  margin-top: 0px;
+  margin-bottom:0px;
+}
+
+.addList{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-control{
+  width: 50%;
+  margin-right: 15px;
+}
+button{
+  padding-left: 20px;
+}
+
+.delete-list {
+    top: 22px;
+    right: 20px;
+    cursor: pointer;
+    color: #eee;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+    .delete-list:hover {
+      color: red;
+    }
+
+    .listLine{
+      display: flex;
+      justify-content: space-between;
+    }
+
+/* .wrapper{
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+
+}  */
+
+
+
+
+/* TASK CSS */
+
+.delete-task {
+    top: 22px;
+    right: 20px;
+    cursor: pointer;
+    color: #eee;
+    font-size: 20px;
+    line-height: 0px;
+    float: right;
+  }
+
+    .delete-task:hover {
+      color: red;
+    }
+
+    @media (min-width:320px) {
+      .row{
+        margin-left: -14px;
+      }
+      .list{
+        width: 290px;
+      }
+    }
+
+    @media (min-width:375px) {
+      .row{
+        margin-left: 12px;
+      }
+      .list{
+        width: 290px;
+      }
+    }
+
+    @media (min-width:375px) {
+      .row{
+        margin-left: 8px;
+      }
+      .list{
+        width: 350px;
+      }
+    }
+
+    @media (min-width:375px) {
+      .row{
+        margin-left: 6px;
+      }
+      .list{
+        width: 350px;
+      }
+    }
+
+    @media (min-width:768px) {
+      .row{
+        margin-left: 36px;
+      }
+      .list{
+        width: 300px;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .row{
+        margin-left: 55px;
+      }
+      .list{
+        width: 299px;
+      }
+    }

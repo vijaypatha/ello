@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="ello">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>e l l o two</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../styles/home.css">
+  </head>
+
+  <body ng-controller="mainCtrl">
+
+    <div class="intro">
+      <div class="">
+<!--       <h1>{{test}}</h1>
+ -->      </div>
+      <div class="">
+        <a href="" ng-click="showListBar = !showListBar"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+      </div>
+    </div>
+
+
+    <div class="input container" ng-show="showListBar">
+      <div class="addList" class="col-xs-4" class="col-md-4">
+        <input type="text" placeholder="Add new list..." class="form-control"  ng-model="listName">
+        <br>
+        <br>
+        <button class="btn btn-primary" ng-click="addList(listName);showListBar=false">Add List</button>
+      </div>
+    </div>
+
+    <section class="container">
+      <div class="row">
+        <div class="">
+
+        </div>
+
+        <div class="list" ng-repeat="list in listData">
+
+          <div class="listLine">
+            <h3>{{list.list}}</h3>
+            <span class="delete-list" ng-click="deleteList(list)">x</span>
+          </div>
+
+
+            <div class="card" ng-repeat="task in list.tasks">
+<!--               {{$parent.$index}}
+ -->              {{task.task}}
+
+              <span class="delete-task" ng-click="deleteTask(task, $parent.$index, $index)">x</span>
+
+            </div>
+
+            <input type="text" placeholder="Add new Task" class="form-control" ng-model="newTask">
+            <br>
+            <button type="button" class="btn btn-success" ng-click="addTask(newTask,list._id)">Add Task</button>
+            <!-- $index = ng-repate of list -->
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- CDNS -->
+    <script src="
+    https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="
+    https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+
+    <!-- Local Files -->
+    <script src="../js/app.js"></script>
+    <script src="../js/mainCtrl.js"></script>
+    <script src="../js/dataService.js"></script>
+    <script src="../js/routes.js"></script>
+
+  </body>
+</html>
